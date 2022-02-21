@@ -24,7 +24,7 @@ public class TicTacToeShould {
         String expected = "_|_|_\n" +
                 "_|_|_\n" +
                 "_|X|_";
-        String result = ticTacToe.play(0,0);
+        String result = ticTacToe.play(1,0);
 
         assertEquals(expected, result);
     }
