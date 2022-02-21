@@ -5,6 +5,10 @@ public class TicTacToe {
         var rowThree = "_|_|_\n";
         var rowTwo = "_|_|_\n";
         var rowOne = "";
+
+        if (x == 2){
+            rowOne = "_|_|X";
+        }
         if (x == 1){
             rowOne = "_|X|_";
         }
