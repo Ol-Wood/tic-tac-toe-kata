@@ -26,6 +26,6 @@ public class TicTacToeShould {
     private static Stream<Arguments> xFirstMoveCases(){
         return Stream.of(
                 Arguments.of(0,0, "_|_|_\n_|_|_\nX|_|_"),
-                Arguments.of(1,0, "_|X|_\n_|_|_\n_|X|_"));
+                Arguments.of(1,0, "_|_|_\n_|_|_\n_|X|_"));
     }
 }
