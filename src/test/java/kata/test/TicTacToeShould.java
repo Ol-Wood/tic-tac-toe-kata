@@ -12,7 +12,7 @@ public class TicTacToeShould {
         var ticTacToe = new TicTacToe();
         String expected = "X|_|_\n" +
                           "_|_|_\n" +
-                          "_|_|x_";
+                          "_|_|_";
         String result = ticTacToe.play(0,0);
 
         assertEquals(expected, result);
