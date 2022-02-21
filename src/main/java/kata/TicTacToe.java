@@ -16,6 +16,12 @@ public class TicTacToe {
             gameSb.append("_|_|_");
         }
 
+        if (y == 2){
+            gameSb.append(buildRow(x) + "\n");
+            gameSb.append("_|_|_\n");
+            gameSb.append("_|_|_");
+        }
+
         return gameSb.toString();
     }
 
