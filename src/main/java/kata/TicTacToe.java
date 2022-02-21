@@ -2,9 +2,16 @@ package kata;
 
 public class TicTacToe {
     public String play(int x, int y) {
+        var rowThree = "_|_|_\n";
+        var rowTwo = "_|_|_\n";
+        var rowOne = "";
         if (x == 1){
-            return "_|_|_\n" + "_|_|_\n" + "_|X|_";
+            rowOne = "_|X|_";
         }
-        return "_|_|_\n" + "_|_|_\n" + "X|_|_";
+
+        if (x == 0){
+            rowOne = "X|_|_";
+        }
+        return rowThree + rowTwo + rowOne;
     }
 }
