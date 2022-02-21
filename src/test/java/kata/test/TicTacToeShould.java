@@ -29,7 +29,9 @@ public class TicTacToeShould {
                 Arguments.of(0, 0, emptyRow + "\n" + emptyRow + "\n" + "X|_|_"),
                 Arguments.of(1, 0, emptyRow + "\n" + emptyRow + "\n" + "_|X|_"),
                 Arguments.of(2, 0, emptyRow + "\n" + emptyRow + "\n" + "_|_|X"),
-                Arguments.of(0, 1, emptyRow + "\n" + "X|_|_\n" + emptyRow)
+                Arguments.of(0, 1, emptyRow + "\n" + "X|_|_\n" + emptyRow),
+                Arguments.of(1, 1, emptyRow + "\n" + "_|X|_\n" + emptyRow),
+                Arguments.of(2, 1, emptyRow + "\n" + "_|_|X\n" + emptyRow)
                 );
     }
 }
