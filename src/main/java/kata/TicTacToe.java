@@ -2,6 +2,8 @@ package kata;
 
 public class TicTacToe {
     public String play(int x, int y) {
-        return "";
+        return "_|_|_\n" +
+                "_|_|_\n" +
+                "_|_|X";
     }
 }

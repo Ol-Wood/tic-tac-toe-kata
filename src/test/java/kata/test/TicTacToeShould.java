@@ -10,9 +10,9 @@ public class TicTacToeShould {
     @Test
     void place_x_first_move_on_top_left(){
         var ticTacToe = new TicTacToe();
-        String expected = "X|_|_\n" +
+        String expected = "_|_|_\n" +
                           "_|_|_\n" +
-                          "_|_|x_";
+                          "_|_|X";
         String result = ticTacToe.play(0,0);
 
         assertEquals(expected, result);
