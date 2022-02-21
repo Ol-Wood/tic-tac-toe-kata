@@ -28,4 +28,15 @@ public class TicTacToeShould {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    void place_x_first_move_on_bottom_right(){
+        var ticTacToe = new TicTacToe();
+        String expected = "_|_|_\n" +
+                "_|_|_\n" +
+                "_|_|X";
+        String result = ticTacToe.play(2,0);
+
+        assertEquals(expected, result);
+    }
 }
