@@ -8,11 +8,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TicTacToeShould {
 
     @Test
-    void place_x_first_move_on_top_left(){
+    void place_x_first_move_on_bottom_left(){
         var ticTacToe = new TicTacToe();
         String expected = "_|_|_\n" +
                           "_|_|_\n" +
-                          "_|_|X";
+                          "X|_|_";
+        String result = ticTacToe.play(0,0);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void place_x_first_move_on_bottom_middle(){
+        var ticTacToe = new TicTacToe();
+        String expected = "_|_|_\n" +
+                "_|_|_\n" +
+                "_|X|_";
         String result = ticTacToe.play(0,0);
 
         assertEquals(expected, result);
