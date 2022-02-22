@@ -23,6 +23,15 @@ public class TicTacToeShould {
         assertEquals(expected, result);
     }
 
+    @Test
+    void place_o_first_moves(){
+        var ticTacToe = new TicTacToe();
+        ticTacToe.play(0,0);
+        var result = ticTacToe.play(1, 0);
+        var expected = "X|O|_" + "\n" + emptyRow + "\n" + emptyRow;
+        assertEquals(expected, result);
+    }
+
 
     private static Stream<Arguments> xFirstMoveCases(){
         return Stream.of(
