@@ -2,27 +2,18 @@ package kata;
 
 public class TicTacToe {
     public String play(int x, int y) {
-        var gameSb = new StringBuilder();
+        var rows = new String[3];
 
-        if (y == 0){
-            gameSb.append("_|_|_\n");
-            gameSb.append("_|_|_\n");
-            gameSb.append(buildRow(x));
+        for (int yAxis = 0; yAxis < 3; yAxis++) {
+            if (yAxis == y){
+                rows[yAxis] = buildRow(x);
+                continue;
+            }
+            rows[yAxis] = "_|_|_";
+
         }
 
-        if (y == 1){
-            gameSb.append("_|_|_\n");
-            gameSb.append(buildRow(x) + "\n");
-            gameSb.append("_|_|_");
-        }
-
-        if (y == 2){
-            gameSb.append(buildRow(x) + "\n");
-            gameSb.append("_|_|_\n");
-            gameSb.append("_|_|_");
-        }
-
-        return gameSb.toString();
+        return String.join("\n", rows);
     }
 
     private String buildRow(int x) {

@@ -26,15 +26,15 @@ public class TicTacToeShould {
 
     private static Stream<Arguments> xFirstMoveCases(){
         return Stream.of(
-                Arguments.of(0, 0, emptyRow + "\n" + emptyRow + "\n" + "X|_|_"),
-                Arguments.of(1, 0, emptyRow + "\n" + emptyRow + "\n" + "_|X|_"),
-                Arguments.of(2, 0, emptyRow + "\n" + emptyRow + "\n" + "_|_|X"),
+                Arguments.of(0, 2, emptyRow + "\n" + emptyRow + "\n" + "X|_|_"),
+                Arguments.of(1, 2, emptyRow + "\n" + emptyRow + "\n" + "_|X|_"),
+                Arguments.of(2, 2, emptyRow + "\n" + emptyRow + "\n" + "_|_|X"),
                 Arguments.of(0, 1, emptyRow + "\n" + "X|_|_\n" + emptyRow),
                 Arguments.of(1, 1, emptyRow + "\n" + "_|X|_\n" + emptyRow),
                 Arguments.of(2, 1, emptyRow + "\n" + "_|_|X\n" + emptyRow),
-                Arguments.of(0, 2, "X|_|_" + "\n" + emptyRow + "\n" + emptyRow),
-                Arguments.of(1, 2, "_|X|_" + "\n" + emptyRow + "\n" + emptyRow),
-                Arguments.of(2, 2, "_|_|X" + "\n" + emptyRow + "\n" + emptyRow)
+                Arguments.of(0, 0, "X|_|_" + "\n" + emptyRow + "\n" + emptyRow),
+                Arguments.of(1, 0, "_|X|_" + "\n" + emptyRow + "\n" + emptyRow),
+                Arguments.of(2, 0, "_|_|X" + "\n" + emptyRow + "\n" + emptyRow)
                 );
     }
 }
