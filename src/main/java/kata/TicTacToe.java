@@ -3,22 +3,25 @@ package kata;
 public class TicTacToe {
 
     public String play(Point point) {
+        String[] rows = {"_|_|_", "_|_|_", "_|_|_"};
 
-        var rowOne = buildRow(point);
+        for (int yAxis = 0; yAxis < 3; yAxis++) {
+            if (point.y() == yAxis)
+                rows[yAxis] = buildRow(point);
+        }
 
-        return rowOne + "\n" +
-                "_|_|_\n" +
-                "_|_|_";
+
+        return String.join("\n", rows);
     }
 
     private String buildRow(Point point) {
-        if (point.x() == 0){
-            return "X|_|_";
-        }
-        if (point.x() == 1){
-            return "_|X|_";
+        String[] cells = {"_", "_", "_"};
+        for (int xAxis = 0; xAxis < 3; xAxis++) {
+            if (point.x() == xAxis)
+                cells[xAxis] = "X";
         }
 
-        return "_|_|X";
+
+        return String.join("|", cells);
     }
 }
