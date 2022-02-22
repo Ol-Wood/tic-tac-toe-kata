@@ -2,6 +2,7 @@ package kata.test;
 
 import kata.Point;
 import kata.TicTacToe;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -13,10 +14,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TicTacToeShould {
 
     private static String emptyLine = "_|_|_";
+    private TicTacToe ticTacToe;
+
+    @BeforeEach
+    void setUp(){
+        this.ticTacToe = new TicTacToe();
+    }
     @ParameterizedTest
     @MethodSource("xFirstMoveTopLine")
     void place_x_first_move_on_top(Point input, String expected){
-        var ticTacToe = new TicTacToe();
         String result = ticTacToe.play(input);
 
         assertEquals(expected, result);
@@ -25,7 +31,6 @@ public class TicTacToeShould {
     @ParameterizedTest
     @MethodSource("xFirstMoveBottomLine")
     void place_x_first_move_on_bottom(Point input, String expected){
-        var ticTacToe = new TicTacToe();
         String result = ticTacToe.play(input);
 
         assertEquals(expected, result);
