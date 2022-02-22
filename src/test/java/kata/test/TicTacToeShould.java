@@ -2,6 +2,7 @@ package kata.test;
 
 import kata.Point;
 import kata.TicTacToe;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -23,14 +24,15 @@ public class TicTacToeShould {
         assertEquals(expected, result);
     }
 
-//    @Test
-//    void place_o_first_moves(){
-//        var ticTacToe = new TicTacToe();
-//        ticTacToe.play(new Move(0, 0));
-//        var result = ticTacToe.play(new Move(0, 0));
-//        var expected = "X|O|_" + "\n" + emptyRow + "\n" + emptyRow;
-//        assertEquals(expected, result);
-//    }
+
+    @Test
+    void place_o_first_moves(){
+        var ticTacToe = new TicTacToe();
+        ticTacToe.play(new Point(1, 0));
+        var result = ticTacToe.play(new Point(1, 0));
+        var expected = "X|O|_" + "\n" + emptyRow + "\n" + emptyRow;
+        assertEquals(expected, result);
+    }
 
 
     private static Stream<Arguments> xFirstMoveCases(){
