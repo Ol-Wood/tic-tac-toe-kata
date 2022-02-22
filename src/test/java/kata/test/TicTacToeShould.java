@@ -1,6 +1,5 @@
 package kata.test;
 
-import kata.Point;
 import kata.TicTacToe;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -17,20 +16,10 @@ public class TicTacToeShould {
 
     @ParameterizedTest
     @MethodSource("xFirstMoveCases")
-    void place_x_first_moves(int x, int y, String expected){
+    void place_x_first_move_on_bottom_left(int x, int y, String expected){
         var ticTacToe = new TicTacToe();
-        String result = ticTacToe.play(new Point(x, y));
+        String result = ticTacToe.play(x,y);
 
-        assertEquals(expected, result);
-    }
-
-
-    @Test
-    void place_o_first_moves(){
-        var ticTacToe = new TicTacToe();
-        ticTacToe.play(new Point(1, 0));
-        var result = ticTacToe.play(new Point(1, 0));
-        var expected = "X|O|_" + "\n" + emptyRow + "\n" + emptyRow;
         assertEquals(expected, result);
     }
 

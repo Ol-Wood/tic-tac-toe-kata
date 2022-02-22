@@ -1,12 +1,12 @@
 package kata;
 
 public class TicTacToe {
-    public String play(Point point) {
+    public String play(int x, int y) {
         var rows = new String[3];
 
         for (int yAxis = 0; yAxis < 3; yAxis++) {
-            if (yAxis == point.y()){
-                rows[yAxis] = buildRow(point.x());
+            if (yAxis == y){
+                rows[yAxis] = buildRow(x);
                 continue;
             }
             rows[yAxis] = "_|_|_";
